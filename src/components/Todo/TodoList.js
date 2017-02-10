@@ -16,7 +16,6 @@ class TodoList extends React.Component {
 
 	componentWillMount() {
 		TodoStore.on('change', () => {
-			console.debug('changed and reacted !');
 			this.setState(TodoStore.tasks);
 		});
 	}
@@ -24,7 +23,6 @@ class TodoList extends React.Component {
 	generateItems(list) {
 		let result = [];
 
-		console.debug('lista');
 		list.map((listItem, index) => {
 			result.push(<TodoItem index={index} key={index} text={listItem.taskText}/>);
 		});
@@ -33,7 +31,6 @@ class TodoList extends React.Component {
 	}
 
 	render() {
-		console.debug(this.props);
 		return (
 			<div>
 				<ul>

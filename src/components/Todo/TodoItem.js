@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import TodoAction from '../../action/TodoAction'
 
 class TodoItem extends React.Component {
 	constructor(props) {
@@ -9,7 +10,10 @@ class TodoItem extends React.Component {
 
 	render() {
 		return (
-			<li> {this.props.text} </li>
+			<li>
+				{this.props.text}
+				<button onClick={() => TodoAction.deleteTask(this)}> - </button>
+			</li>
 		);
 	}
 }

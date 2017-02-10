@@ -3,7 +3,6 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-import Dispatcher from '../../dispatcher';
 import TodoStore from '../../store/TodoStore';
 
 class TodoList extends React.Component {
